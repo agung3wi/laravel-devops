@@ -42,6 +42,10 @@ Route::get('/admin/pelanggan', function () {
 });
 
 Route::get('/test', function () {
+    $x = 0.0001;
+    for ($i = 0; $i <= 1000000; $i++) {
+        $x += sqrt($x);
+    }
     return 'Hello test';
 });
 
