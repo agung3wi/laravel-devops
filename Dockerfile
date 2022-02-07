@@ -12,3 +12,4 @@ COPY .env.example /app/.env
 WORKDIR /app
 RUN chown www-data:www-data -R /app
 RUN composer install
+RUN chmod 0777 -R /app/storage
