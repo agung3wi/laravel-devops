@@ -48,6 +48,13 @@ return [
     */
 
     'channels' => [
+        'logstash' => [
+            'driver' => 'custom',
+            'via'    => \App\LogstashLogger::class,
+            'host'   => env('LOGSTASH_HOST', '127.0.0.1'),
+            'port'   => env('LOGSTASH_PORT', 4718),
+        ],
+
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
